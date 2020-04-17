@@ -2,9 +2,14 @@ import React from "react";
 
 
 const Card = ()=>{
+    //reserved word in js
+    //inline styling i jsx/react : 
+    // style={{  width : "18rem"}}
+    //egenskap till ex. width ska inte ha nån citationstecken
+    // och Värdet till ex. "18rem" ska ha citationstecken
 
     return (
-        <div className={"card"}>
+        <div className={"card"} style={{width: "18rem"}}>
      <img src={"..."} className={"card-img-top"} alt={"..."}/>
      
   <div className={"card-body"}>
