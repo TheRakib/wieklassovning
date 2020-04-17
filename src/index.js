@@ -11,9 +11,7 @@ import Main from "./components/Main"
 
 
 
+
 ReactDOM.render(<Main/> , document.querySelector("#root"))
 
-//online linkeninlearning
-//Udemy : stepan grinder 
-//handbook : freecodecamp react handbook
-//Youtube : devEd 
+
