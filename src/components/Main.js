@@ -2,13 +2,14 @@
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import Card from "./Card";
 
-
-const Main = (props)=>{
+const Main = ()=>{
 return (
     <div >
           <Header  name={"Rakib"}  kurs={"React"} />
-          {props.test}
+           
+           <Card/>
            This is the main div
            <Footer year={2020}/>
    </div>
@@ -26,7 +27,7 @@ return (
 
    //parentchild relation
    //props  :  properties
-   //bootstrap, scss i react
+   //bootstrap, scss/sass i react
    // projekt : fixa card component
 //Intro till class component class component 
 export default Main;
