@@ -3,6 +3,7 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Card from "./Card";
+import "../style/_main.scss"
 
 const Main = ()=>{
 return (
@@ -10,6 +11,7 @@ return (
           <Header  name={"Rakib"}  kurs={"React"} />
            
            <Card/>
+           <h1 className={"test"}> Testing</h1>
            This is the main div
            <Footer year={2020}/>
    </div>
