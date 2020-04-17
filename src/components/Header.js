@@ -24,4 +24,5 @@ const Header = (props)=>{
 
 export default Header;
 
-//skapa en footer element och skicka year= 2020 som props. 
+//skapa en footer element och skicka year= 2020  //dynamisk år med help av
+// js Date egenskapen som props. 
