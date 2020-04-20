@@ -1,11 +1,109 @@
 
-import React from "react";
+import React, {Component} from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Card from "./Card";
 import "../style/_main.scss"
 
-const Main = ()=>{
+
+class Main extends Component{
+
+    //constructor 
+    // Varför anväder vi constructor: 
+           //för att kunna sätta ett default värde
+    // anropas varje gång det skapas en instance av klassen
+   
+    constructor(props){
+        super(props)
+        
+        this.state = {
+            lat:"",
+            long:""
+        }
+      
+      window.navigator.geolocation.getCurrentPosition( success=> {
+          this.setState({lat: success.coords.longitude,
+                         long: success.coords.latitude})
+      })
+
+
+    }
+
+
+    render(){
+        return (
+            <div> 
+                long: {this.state.long}
+                lat : {this.state.lat}
+
+            </div>
+        )
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//class component 
+
+/* class Main extends Component { 
+
+//initallierar state //sätter ett default värde
+        state = {  lat:"din latidute", 
+                   long:""
+                   }
+
+uppdatelocation(){
+    window.navigator.geolocation.getCurrentPosition((success)=>{
+        console.log(success.coords.latitude)
+        //Gör aldrig this.state.lat = success.coords.latitude (gör aldrig så här)
+        
+        this.setState({lat:success.coords.latitude, long:success.coords.longitude})
+
+    })
+        
+}
+ 
+
+
+
+//uppdatera state 
+
+
+// renderas (state uppdatering gör component omrendering)
+
+
+//din data ska komma från user eller från en api
+// state kan vara tomt först 
+// state ska uppdateras 
+// när state uppdateras uppdatera oxå render.
+    render(){
+        return (
+            <div>
+                 {this.uppdatelocation()}
+                
+                din location adress: {this.state.lat}
+                               <div> long:   {this.state.long} </div>  
+               
+            </div>
+        )
+    }
+
+}
+ */
+
+//functional component 
+/* const Main = ()=>{
 return (
     <div >
           <Header  name={"Rakib"}  kurs={"React"} />
@@ -19,7 +117,7 @@ return (
   )
 }
   //enkla komponentar : funtional component.
-
+ */
 //npx create-react-app minapp
 //src mappen och skapade nytt src och lagt till index.js
 
