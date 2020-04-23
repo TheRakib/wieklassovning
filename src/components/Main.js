@@ -16,25 +16,36 @@ class Main extends Component{
     constructor(props){
         super(props)
         
+        // initial value /default value
+        // uppdateras av async function eller event  (när uppdateras state 
+        //                    renderas component igen)
+        // Visa state data to user 
+
+        //this refererar till instance/kopia/objektet 
+        //som använder det här componentet
         this.state = {
             lat:"",
-            long:""
+            long:"", 
+            count:1
         }
       
       window.navigator.geolocation.getCurrentPosition( success=> {
           this.setState({lat: success.coords.longitude,
                          long: success.coords.latitude})
-      })
+      }, error=> console.log(error))
 
 
     }
 
-
+  
+  
     render(){
         return (
             <div> 
                 long: {this.state.long}
                 lat : {this.state.lat}
+                <Header location= {this.state.long}/>
+                 <Card/>
 
             </div>
         )
