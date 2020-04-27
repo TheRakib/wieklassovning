@@ -7,6 +7,9 @@ import Navbar from "./Navbar";
 import Formular from "./Formular"
 import Eventtest from "./Eventtest";
 
+
+import Apitest from "./Apitest";
+
 const Approute = ()=>{
 
     return (
@@ -16,6 +19,9 @@ const Approute = ()=>{
 
                     <Navbar/>
                   
+                    <Apitest/>
+
+
                     <Route path="/" component={Main} exact   ></Route>
                     <Route path ="/card" exact component= {Card}></Route>
                     <Route component= {NotFound} ></Route>
