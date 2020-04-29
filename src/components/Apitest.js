@@ -40,3 +40,12 @@ onClickApi(){
 }
 
 export default Apitest;
+
+
+// npx create-strapi-app cmsserver --quickstart
+//öppna cms i terminalen 
+//ctrl + c  //för att stänga
+//npm run develop // startar
+
+
+// http://localhost:1337/admin

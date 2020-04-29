@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Main from "./Main";
 import Card from "./Card";
 import NotFound from "./NotFound";
@@ -9,6 +9,7 @@ import Eventtest from "./Eventtest";
 
 
 import Apitest from "./Apitest";
+import FileUpload from "./FileUpload";
 
 const Approute = ()=>{
 
@@ -21,14 +22,16 @@ const Approute = ()=>{
                   
                     <Apitest/>
 
-
+  <Switch>
                     <Route path="/" component={Main} exact   ></Route>
+                   <Route path="/fileupload" component= {FileUpload}  exact></Route>
                     <Route path ="/card" exact component= {Card}></Route>
                     <Route component= {NotFound} ></Route>
                     <Eventtest />
                      
                      <Formular />
                     
+                    </Switch>
     
             </BrowserRouter>
 
